@@ -1,7 +1,7 @@
 import React from "react";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "../ui/badge";
-import { AspectRatio } from "@radix-ui/react-aspect-ratio";
+import { AspectRatio } from "@/components/ui/aspect-ratio";
 import { Separator } from "@/components/ui/separator";
 import { Button } from "@/components/ui/button";
 

@@ -30,10 +30,10 @@ export default function Footer() {
                 <Mail className="h-4 w-4" /> fitzpatrickmarketing@outlook.com
               </a>
               <a href="tel:+3530000000" className="flex items-center gap-2 hover:underline">
-                <Phone className="h-4 w-4" /> +353 00 000 0000
+                <Phone className="h-4 w-4" color="blue" /> +353 00 000 0000
               </a>
               <p className="flex items-start gap-2 text-muted-foreground">
-                <MapPin className="mt-0.5 h-4 w-4" /> Dublin, Ireland
+                <MapPin className="mt-0.5 h-4 w-4" color="red" /> Limerick, Ireland
               </p>
             </div>
 
@@ -43,7 +43,7 @@ export default function Footer() {
 
         {/* Bottom bar */}
         <div className="flex flex-col items-start justify-between gap-4 text-sm text-muted-foreground md:flex-row md:items-center">
-          <p>© {new Date().getFullYear()} Fitzpatrick Marketing. All rights reserved.</p>
+          <p >© {new Date().getFullYear()} Fitzpatrick Marketing. All rights reserved.</p>
           <div className="flex flex-wrap items-center gap-4">
             <a className="hover:underline" href="#privacy">Privacy</a>
             <a className="hover:underline" href="#terms">Terms</a>

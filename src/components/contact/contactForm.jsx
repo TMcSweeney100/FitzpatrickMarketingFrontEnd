@@ -82,11 +82,8 @@
       </div>
     </section>
 
-    <div className="grid gap-6 md:grid-cols-3">
-  <CaseCard client="Acme" title="Website refresh" tags={["Web","Brand"]} metrics={["CVR +15%","CPL −22%"]} />
-  <CaseCard client="Delta" title="Lead gen revamp" tags={["Lead Gen"]} metrics={["ROAS 3.2×","Leads +72"]} />
-  {/* ... */}
-</div>
+   
+
                                     </>
     )
     }
