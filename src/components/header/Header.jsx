@@ -3,7 +3,7 @@ import { Menu, Space } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Separator } from "@/components/ui/separator";
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
-import logo from "@/images/mainLogoV2.png";
+import logo from "@/images/mainLogoV3.png";
 
 
 
@@ -34,8 +34,8 @@ function Header() {
   <a href="#contact" className="text-sm text-muted-foreground hover:text-foreground whitespace-nowrap">Contact</a>
 
   <Separator orientation="vertical" className="h-5" />
-  <Button variant="default"asChild className=" transition-transform hover:translate-y-[-1px] ">
-  <a href="#contact">Get a Quote</a>
+  <Button size="sm" variant="default"asChild className=" transition-transform hover:translate-y-[-1px] ">
+  <a href="#contact">Get Free Value Proposition</a>
 </Button>
  
 </nav>

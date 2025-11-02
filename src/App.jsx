@@ -19,7 +19,7 @@ return (
 </section>
 
     <section id="proof" className="container mx-auto max-w-6xl px-4 py-16">
-      <h2 className="text-2xl md:text-3xl font-semibold tracking-tight mb-6">Proof</h2>
+      <h2 className="text-2xl md:text-3xl font-semibold tracking-tight mb-6">Portfolio</h2>
 
       {/* Portfolio (cases) */}
       <div className="grid gap-6 md:grid-cols-3">

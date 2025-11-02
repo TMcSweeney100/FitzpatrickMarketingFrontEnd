@@ -21,7 +21,7 @@ export default function Footer() {
           <div className="max-w-md">
             <div className="text-2xl font-bold tracking-tight">Fitzpatrick<span className="text-muted-foreground"> Marketing</span></div>
             <p className="text-sm mt-2 text-muted-foreground">
-              Simple, effective marketing for SMEs. Clear offers, clean design, measurable results.
+              Affordable marketing tailored to YOU.
             </p>
           </div>
 
