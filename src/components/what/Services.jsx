@@ -7,24 +7,24 @@ export default function Services() {
 const items = [
                 {
                 icon: MonitorSmartphone,
-                title: "Websites that convert",
+                title: "Email Marketing",
                 outcome: "Clarity, speed, mobile-first",
                 bullets: ["Clear structure and copy", "Fast loads, SEO basics", "Analytics + goals wired"],
-                tag: "Web",
+                tag: "Email",
                 },
                 {
                 icon: Megaphone,
-                title: "Lead gen campaigns",
-                outcome: "Lower CPL, more qualified leads",
-                bullets: ["Offer + landing optimization", "Ad creative + testing", "Tracking + reporting"],
+                title: "Google and Meta Ads",
+                outcome: "Always on acuisiton that pays for itself",
+                bullets: ["Creative + custom built for each platform", "Clear Reporting On Spend Vs Revenue"],
                 tag: "Ads",
                 },
                 {
                 icon: Layers,
-                title: "Brand & messaging",
-                outcome: "Positioning that resonates",
-                bullets: ["Message hierarchy", "Visual polish", "Practical brand kit"],
-                tag: "Brand",
+                title: "Social Managment",
+                outcome: "Your Socials Handled End To End",
+                bullets: ["Community Engagement + DM triage", "Monthly Reports with Actionable Next Steps", "Practical brand kit"],
+                tag: "Social Media",
                 },  
                 ];                                                                                  
 

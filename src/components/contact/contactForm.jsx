@@ -31,9 +31,9 @@
           </p>
 
           <ul className=" ml-4 list-disc space-y-3">
-      <li>Prefer email? hello@friendco.marketing</li>
+      <li>Prefer email? fitzpatrick_marketing@outlook.com</li>
       <li>We reply within 24–48 hours.</li>
-      <li>3rd level of one-liners : 20 gold coins</li>
+      
     </ul>
 
         </div>
