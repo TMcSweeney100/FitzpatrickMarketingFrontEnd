@@ -12,6 +12,8 @@
     import { Button } from '../ui/button'
     import { Label } from '../ui/label'
     import { Separator } from '../ui/separator'
+    import CaseCard from '../proof/CaseCard'
+   
 
     function ContactForm() {
     return (
@@ -72,13 +74,16 @@
           </CardContent>
 
           <CardFooter className="flex-col gap-2">
-            <Button variant="outline" type="submit" className="w-full">
+            <Button  type="submit" className="bg-black text-white w-full">
               Submit your Enquiry
             </Button>
           </CardFooter>
         </Card>
       </div>
     </section>
+
+   
+
                                     </>
     )
     }
