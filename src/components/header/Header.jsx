@@ -1,8 +1,10 @@
 import React from "react";
-import { Menu } from "lucide-react";
+import { Menu, Space } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Separator } from "@/components/ui/separator";
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
+import logo from "@/images/mainLogoV2.png";
+
 
 
 function Header() {
@@ -12,9 +14,17 @@ function Header() {
    <header className="sticky top-0 z-50 border-b bg-background/80 backdrop-blur shadow-sm">
 
         <div className="mx-auto flex h-16 max-w-6xl items-center justify-between px-4">
-            <a href="#" className="text-base font-bold tracking-tight">
-                Fitzpatrick <span className="text-muted-foreground"> Marketing</span>
-            </a>
+
+          <div className="flex items-center gap-2 text-base font-bold tracking-tight ">
+            <div className="rounded-xl">
+
+              <img className="h-15 w-14  object-fill "
+                src={logo}
+                />
+            </div>
+              <span> Fitzpatrick <span className="text-muted-foreground">Marketing</span></span>
+          </div>
+           
 
         {/* Desktop nav     */}
 

@@ -32,9 +32,9 @@ return (
 
       {/* Testimonials */}
       <div className="grid gap-6 md:grid-cols-3">
-        <Testimonial name="Jane O."  role="CMO @ Acme"     quote="Leads up 38% in 6 weeks." />
-        <Testimonial name="Brian K." role="Founder @ Delta" quote="Clear plan, fast execution." />
-        <Testimonial name="Sarah M." role="Marketing @ Zeta" quote="CPA down 22%." />
+        <Testimonial name="Shah Safi"  role="Manager"     quote="Working with Fitzpatrick Marketing gave us the consistency and professional touch we’d been missing. From content design to scheduling, everything was handled with direction and purpose. Our social media now reflects our brand, and the results have gone beyond what we expected from the original free value proposition." />
+        <Testimonial name="Michael Daffy" role="Owner" quote="We had tried posting and managing  in-house but lacked a clear strategy. Fitzpatrick Marketing brought design capability, structure, and a level of professionalism that made a huge difference. The campaigns delivered not only met the promises in the value proposition but exceeded them, giving our dealership a much stronger presence online and helping kickstart our sales." />
+        <Testimonial name="Wayne Slattery" role="Owner" quote="Consistency was our biggest challenge - we knew the park had potential but struggled to showcase it properly. Fitzpatrick Marketing provided direction, creative design, and a reliable posting schedule that told our story. They delivered on every detail of the value proposition and added even more value along the way. The difference has been massive, as well as the ease of working with them." />
       </div>
     </section>
 

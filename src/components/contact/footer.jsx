@@ -27,10 +27,10 @@ export default function Footer() {
 
             <div className="space-y-2 text-sm md:text-right md:items-end">
               <a href="mailto:hello@friendco.marketing" className="flex items-center gap-2 hover:underline">
-                <Mail className="h-4 w-4" /> fitzpatrickmarketing@outlook.com
+                <Mail className="h-4 w-4" /> fitzpatrick_marketing@outlook.com
               </a>
               <a href="tel:+3530000000" className="flex items-center gap-2 hover:underline">
-                <Phone className="h-4 w-4" color="blue" /> +353 00 000 0000
+                <Phone className="h-4 w-4" color="blue" /> (083) 203 8680
               </a>
               <p className="flex items-start gap-2 text-muted-foreground">
                 <MapPin className="mt-0.5 h-4 w-4" color="red" /> Limerick, Ireland
