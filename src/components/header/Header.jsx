@@ -3,7 +3,7 @@ import { Menu, Space } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Separator } from "@/components/ui/separator";
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
-import logo from "@/images/mainLogoV3.png";
+import logo from "@/images/mainLogov3.png";
 
 
 
