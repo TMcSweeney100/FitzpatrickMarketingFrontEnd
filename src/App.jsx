@@ -23,9 +23,9 @@ return (
 
       {/* Portfolio (cases) */}
       <div className="grid gap-6 md:grid-cols-3">
-        <CaseCard client="Acme"  title="Website refresh"  tags={["Web","Brand"]}    metrics={["CVR +15%","CPL −22%"]} />
-        <CaseCard client="Delta" title="Lead gen revamp" tags={["Lead Gen"]}       metrics={["ROAS 3.2×","Leads +72"]} />
-        <CaseCard client="Zeta"  title="New brand + site" tags={["Brand","Web"]}   metrics={["Bounce −18%"]} />
+        <CaseCard client="Pizza Planet 2"  title="Website refresh"  tags={["Web","Brand"]}    metrics={["CVR +15%","CPL −22%"]} />
+        <CaseCard client="Daffy Car Sales" title="Social Media Revamp" tags={["Social Media"]}       metrics={["ROAS 3.2×","Leads +72"]} />
+        <CaseCard client="Basecamp Adventure Park"  title="New Website" tags={["Brand","Web"]}   metrics={["Bounce −18%"]} />
       </div>
 
       <div className="my-10" />

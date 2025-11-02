@@ -6,7 +6,7 @@ import { Separator } from "@/components/ui/separator";
 export default function Testimonial({ name, role, quote, avatar }) {
   return (
     <Card>
-      <CardContent className="p-5">
+      <CardContent className="p-5 mt-4">
         <div className="flex items-center gap-3">
           <Avatar>
             <AvatarImage src={avatar} alt={name} />
