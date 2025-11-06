@@ -29,7 +29,7 @@ function Header() {
         {/* Desktop nav     */}
 
             <nav className="hidden md:flex items-center gap-6">
-  <a href="#what"    className="text-sm text-muted-foreground hover:text-foreground whitespace-nowrap">What we do</a>
+  <a href="#services"    className="text-sm text-muted-foreground hover:text-foreground whitespace-nowrap">Services</a>
   <a href="#proof"   className="text-sm text-muted-foreground hover:text-foreground whitespace-nowrap">Results</a>
   <a href="#contact" className="text-sm text-muted-foreground hover:text-foreground whitespace-nowrap">Contact</a>
 
@@ -53,7 +53,7 @@ function Header() {
             </SheetTrigger>
             <SheetContent side="left" className="w-80">
               <div className="mt-6 space-y-4">
-                <a href="#what" className="block text-sm">What we do</a>
+                <a href="#services" className="block text-sm">Services</a>
                 <a href="#proof" className="block text-sm">Proof</a>
                 <a href="#contact" className="block text-sm">Contact</a>
                 <Separator className="my-4" />

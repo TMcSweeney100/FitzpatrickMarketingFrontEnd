@@ -13,9 +13,14 @@ return (
 <>
 <Header />
 <main>
-<section id="what" className="container mx-auto max-w-6xl px-4 py-16">
-<h2 className="text-2xl md:text-3xl font-semibold tracking-tight mb-6">What we do</h2>
+<section id="services" className="container mx-auto max-w-6xl px-4 py-16">
+<h2 className="text-2xl md:text-3xl font-semibold tracking-tight">Services</h2>
+<p className="mt-3 text-base text-muted-foreground">
+AFFORDABLE services, tailored to your business needs.
+</p>
+<div className="mt-8">
 <Services/>
+</div>
 </section>
 
     <section id="proof" className="container mx-auto max-w-6xl px-4 py-16">
