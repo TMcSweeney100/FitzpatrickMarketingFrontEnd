@@ -1,40 +1,68 @@
 import React from "react";
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import { Badge } from "../ui/badge";
-import { AspectRatio } from "@/components/ui/aspect-ratio";
-import { Separator } from "@/components/ui/separator";
+import { Card, CardContent, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
+import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
+import {
+  Dialog,
+  DialogContent,
+  DialogDescription,
+  DialogHeader,
+  DialogTitle,
+  DialogTrigger,
+} from "@/components/ui/dialog";
 
+function CaseCard({ title, client, tags = [], summary, logo, quote, person, role }) {
+  const logoLabel = logo ?? client?.charAt(0) ?? "?";
 
-
-function CaseCard({ title, client, tags = [], metrics = [] }) {
   return (
-    <>
-    
-     <Card className="overflow-hidden">
-      <AspectRatio ratio={16/9} className="bg-muted" />
-      <CardHeader>
-        <CardTitle className="text-base">{client} — {title}</CardTitle>
+    <Card className="flex h-full flex-col border border-border/70 shadow-sm hover:border-primary/40 transition">
+      <CardHeader className="space-y-4">
+        <div className="flex items-center gap-4">
+          <div className="flex h-14 w-14 items-center justify-center rounded-2xl bg-muted text-base font-semibold text-muted-foreground">
+            {logoLabel}
+          </div>
+          <div>
+            <CardTitle className="text-lg">{client}</CardTitle>
+            <p className="text-sm text-muted-foreground">{title}</p>
+          </div>
+        </div>
+        {tags.length ? (
+          <div className="flex flex-wrap gap-2">
+            {tags.map((tag) => (
+              <Badge key={tag} variant="secondary">
+                {tag}
+              </Badge>
+            ))}
+          </div>
+        ) : null}
       </CardHeader>
-      <CardContent className="space-y-3">
-        <div className="flex flex-wrap gap-2">
-          {tags.map((t) => <Badge key={t} variant="secondary">{t}</Badge>)}
-        </div>
-        <Separator />
-        <div className="flex flex-wrap gap-2 text-xs">
-          {metrics.map((m) => <Badge key={m}>{m}</Badge>)}
-        </div>
-        <div className="pt-2">
-          <Button size="sm" variant="outline">View case</Button>
-        </div>
+      <CardContent className="flex-1 text-sm leading-relaxed text-muted-foreground">
+        {summary}
       </CardContent>
+      {quote ? (
+        <CardFooter className="border-t border-border/70 bg-muted/30">
+          <Dialog>
+            <DialogTrigger asChild>
+              <Button className="w-full" variant="default">
+                View testimonial
+              </Button>
+            </DialogTrigger>
+            <DialogContent className="max-w-xl space-y-4">
+              <DialogHeader>
+                <DialogTitle>{client}</DialogTitle>
+                <DialogDescription>{title}</DialogDescription>
+              </DialogHeader>
+              <p className="text-base leading-relaxed text-foreground">{quote}</p>
+              <div className="text-sm font-medium text-muted-foreground">
+                {person}
+                {role ? ` · ${role}` : null}
+              </div>
+            </DialogContent>
+          </Dialog>
+        </CardFooter>
+      ) : null}
     </Card>
-    
-    </>
-      
-
-  )
+  );
 }
 
-export default CaseCard
-
+export default CaseCard;

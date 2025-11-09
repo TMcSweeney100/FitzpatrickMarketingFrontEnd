@@ -1,17 +1,19 @@
+import { useState } from "react";
 import Header from "./components/header/Header.jsx";
 import ContactForm from "./components/contact/contactForm.jsx";
 import Footer from "./components/contact/footer.jsx";
 import CaseCard from "@/components/proof/CaseCard";
 import Services from "./components/what/Services.jsx";
-import Testimonial from "@/components/proof/Testimonial";
 import {
   Card,
   CardContent,
   CardDescription,
+  CardFooter,
   CardHeader,
   CardTitle,
 } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
+import { Button } from "@/components/ui/button";
 import {
   HoverCard,
   HoverCardContent,
@@ -23,6 +25,13 @@ import {
   AccordionItem,
   AccordionTrigger,
 } from "@/components/ui/accordion";
+import {
+  Carousel,
+  CarouselContent,
+  CarouselItem,
+  CarouselNext,
+  CarouselPrevious,
+} from "@/components/ui/carousel";
 import "./App.css";
 
 const hoverHighlights = [
@@ -90,8 +99,68 @@ const campaignPackages = [
   },
 ];
 
+const storySlides = [
+  {
+    heading: "Why start another agency?",
+    body: [
+      "When I started this business the goal was simple: help owners get real results from marketing without the bloated retainers. There are countless agencies willing to take your budget, but very few that meet you where you are.",
+      "I wanted to build something that felt practical, human, and within reach for businesses that knew marketing mattered but did not know where to start.",
+    ],
+  },
+  {
+    heading: "Affordable marketing with heart",
+    body: [
+      "We focused on AFFORDABLE solutions for small local businesses, connecting them with their customers through social media, ad campaigns, and clear strategy.",
+      "The aim was to craft systems they could eventually sustain on their own, making them more digitally literate and confident in every tool we introduced.",
+    ],
+  },
+  {
+    heading: "Born from clients' frustrations",
+    body: [
+      "As promises turned into results, we heard the same story: previous partners offered little care, attention, or measurable wins.",
+      "Fitzpatrick Marketing grew out of that gap. Today, with a compact team of specialists, we keep delivering for businesses big and small—staying true to the mission of providing AFFORDABLE marketing tailored to YOU.",
+    ],
+  },
+];
+
+const clientStories = [
+  {
+    client: "Pizza Planet 2",
+    title: "Website refresh",
+    tags: ["Web", "Brand"],
+    summary:
+      "Rebuilt their ordering experience with a sharp brand system and conversion-focused landing flows.",
+    quote:
+      "Working with Fitzpatrick Marketing gave us the consistency and professional touch we had been missing. Everything was handled with direction and purpose, and the results went beyond what we expected.",
+    person: "Shah Safi",
+    role: "Manager",
+  },
+  {
+    client: "Daffy Car Sales",
+    title: "Social media revamp",
+    tags: ["Social Media", "Ads"],
+    summary:
+      "Designed a cohesive content engine plus paid amplification to keep the dealership top of feed.",
+    quote:
+      "We had tried posting in-house but lacked structure. Fitzpatrick Marketing brought design, strategy, and professionalism that made a huge difference. Campaigns exceeded promises and strengthened our presence.",
+    person: "Michael Daffy",
+    role: "Owner",
+  },
+  {
+    client: "Basecamp Adventure Park",
+    title: "New website and launch",
+    tags: ["Brand", "Web"],
+    summary:
+      "Captured the park story through new visuals, site architecture, and seasonal activation campaigns.",
+    quote:
+      "Consistency was our biggest challenge. Fitzpatrick Marketing provided direction, creative design, and a reliable schedule that told our story. They delivered on every detail and added more value along the way.",
+    person: "Wayne Slattery",
+    role: "Owner",
+  },
+];
+
 function App() {
-return (
+ return (
 <>
 <Header />
 <main>
@@ -316,23 +385,92 @@ AFFORDABLE services, tailored to your business needs.
   </div>
 </section>
 
-    <section id="proof" className="container mx-auto max-w-6xl px-4 py-16">
-      <h2 className="text-2xl md:text-3xl font-semibold tracking-tight mb-6">Portfolio</h2>
+<section id="about" className="container mx-auto max-w-6xl px-4 py-16">
+  <div className="grid gap-10 lg:grid-cols-[0.9fr,1.1fr]">
+    <div className="space-y-5">
+      <Badge
+        variant="secondary"
+        className="w-fit rounded-full px-4 py-1 text-[0.7rem] uppercase tracking-widest"
+      >
+        About us
+      </Badge>
+      <h2 className="text-3xl font-semibold tracking-tight md:text-4xl">
+        Our story is rooted in making modern marketing feel within reach.
+      </h2>
+      <p className="text-base leading-relaxed text-muted-foreground">
+        Fitzpatrick Marketing was born from a desire to give business owners the kind of partnership we
+        wished existed for ourselves: practical, transparent, and obsessed with outcomes. Hover through the
+        chapters to see how we got here.
+      </p>
+    </div>
 
-      {/* Portfolio (cases) */}
-      <div className="grid gap-6 md:grid-cols-3">
-        <CaseCard client="Pizza Planet 2"  title="Website refresh"  tags={["Web","Brand"]}    metrics={["CVR +15%","CPL −22%"]} />
-        <CaseCard client="Daffy Car Sales" title="Social Media Revamp" tags={["Social Media"]}       metrics={["ROAS 3.2×","Leads +72"]} />
-        <CaseCard client="Basecamp Adventure Park"  title="New Website" tags={["Brand","Web"]}   metrics={["Bounce −18%"]} />
+    <Card className="border border-border/60 shadow-md shadow-primary/10">
+      <CardHeader className="space-y-2">
+        <div className="flex items-center justify-between">
+          <p className="text-xs font-semibold uppercase tracking-[0.3em] text-muted-foreground">
+            Our story
+          </p>
+          <Badge variant="outline" className="rounded-full px-3 py-1 text-xs uppercase tracking-widest">
+            Fitzpatrick Marketing
+          </Badge>
+        </div>
+        <CardTitle className="text-2xl">Click through the chapters.</CardTitle>
+        <CardDescription>
+          Use the carousel to read the moments that shaped the agency.
+        </CardDescription>
+      </CardHeader>
+      <CardContent>
+        <Carousel className="relative">
+          <CarouselContent>
+            {storySlides.map((story) => (
+              <CarouselItem key={story.heading}>
+                <div className="space-y-4 text-base leading-relaxed text-muted-foreground">
+                  <h3 className="text-xl font-semibold text-foreground">{story.heading}</h3>
+                  {story.body.map((paragraph, idx) => (
+                    <p key={idx}>{paragraph}</p>
+                  ))}
+                </div>
+              </CarouselItem>
+            ))}
+          </CarouselContent>
+          <div className="absolute -bottom-16 right-0 flex items-center gap-2">
+            <CarouselPrevious />
+            <CarouselNext />
+          </div>
+        </Carousel>
+      </CardContent>
+      <CardFooter className="border-t border-border/60 py-6">
+        <div className="flex w-full items-center justify-center gap-2">
+          {storySlides.map((story, idx) => (
+            <span key={story.heading} className="h-2 w-8 rounded-full bg-muted" />
+          ))}
+        </div>
+      </CardFooter>
+    </Card>
+  </div>
+</section>
+
+    <section id="clients" className="container mx-auto max-w-6xl px-4 py-16 space-y-8">
+      <div className="space-y-4">
+        <Badge
+          variant="secondary"
+          className="w-fit rounded-full px-4 py-1 text-[0.7rem] uppercase tracking-widest"
+        >
+          Clients & testimonials
+        </Badge>
+        <h2 className="text-2xl md:text-3xl font-semibold tracking-tight md:text-4xl">
+          Stories from the brands we champion.
+        </h2>
+        <p className="text-base text-muted-foreground md:max-w-3xl">
+          Each engagement starts with a clear goal and ends with measurable results. Click any client to read their
+          testimonial and see how we collaborated.
+        </p>
       </div>
 
-      <div className="my-10" />
-
-      {/* Testimonials */}
-      <div className="grid gap-6 md:grid-cols-3">
-        <Testimonial name="Shah Safi"  role="Manager"     quote="Working with Fitzpatrick Marketing gave us the consistency and professional touch we’d been missing. From content design to scheduling, everything was handled with direction and purpose. Our social media now reflects our brand, and the results have gone beyond what we expected from the original free value proposition." />
-        <Testimonial name="Michael Daffy" role="Owner" quote="We had tried posting and managing  in-house but lacked a clear strategy. Fitzpatrick Marketing brought design capability, structure, and a level of professionalism that made a huge difference. The campaigns delivered not only met the promises in the value proposition but exceeded them, giving our dealership a much stronger presence online and helping kickstart our sales." />
-        <Testimonial name="Wayne Slattery" role="Owner" quote="Consistency was our biggest challenge - we knew the park had potential but struggled to showcase it properly. Fitzpatrick Marketing provided direction, creative design, and a reliable posting schedule that told our story. They delivered on every detail of the value proposition and added even more value along the way. The difference has been massive, as well as the ease of working with them." />
+      <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+        {clientStories.map((story) => (
+          <CaseCard key={story.client} {...story} />
+        ))}
       </div>
     </section>
 

@@ -110,8 +110,8 @@ export default function Footer() {
             <a className="hover:text-foreground" href="#services">
               Services
             </a>
-            <a className="hover:text-foreground" href="#proof">
-              Results
+            <a className="hover:text-foreground" href="#clients">
+              Clients
             </a>
             <a className="hover:text-foreground" href="#contact">
               Contact
