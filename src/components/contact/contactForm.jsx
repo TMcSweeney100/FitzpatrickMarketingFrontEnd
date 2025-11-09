@@ -19,7 +19,7 @@ import {
   CalendarCheck,
   MessageSquare,
 } from "lucide-react";
-import { useToast } from "@/components/ui/use-toast";
+import { toast } from "sonner";
 
 const initialFormState = {
   name: "",
@@ -40,7 +40,6 @@ const budgetOptions = [
 ];
 
 function ContactForm() {
-  const { toast } = useToast();
   const [formValues, setFormValues] = useState(initialFormState);
 
   const handleChange = (event) => {
