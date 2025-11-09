@@ -30,6 +30,7 @@ function Header() {
 
             <nav className="hidden md:flex items-center gap-6">
   <a href="#services"    className="text-sm text-muted-foreground hover:text-foreground whitespace-nowrap">Services</a>
+  <a href="#campaigns"    className="text-sm text-muted-foreground hover:text-foreground whitespace-nowrap">Campaigns</a>
   <a href="#proof"   className="text-sm text-muted-foreground hover:text-foreground whitespace-nowrap">Results</a>
   <a href="#contact" className="text-sm text-muted-foreground hover:text-foreground whitespace-nowrap">Contact</a>
 
@@ -54,6 +55,7 @@ function Header() {
             <SheetContent side="left" className="w-80">
               <div className="mt-6 space-y-4">
                 <a href="#services" className="block text-sm">Services</a>
+                <a href="#campaigns" className="block text-sm">Campaigns</a>
                 <a href="#proof" className="block text-sm">Proof</a>
                 <a href="#contact" className="block text-sm">Contact</a>
                 <Separator className="my-4" />

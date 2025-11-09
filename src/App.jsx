@@ -23,7 +23,6 @@ import {
   AccordionItem,
   AccordionTrigger,
 } from "@/components/ui/accordion";
-import { Toaster } from "@/components/ui/sonner";
 import "./App.css";
 
 const hoverHighlights = [
@@ -41,6 +40,53 @@ const hoverHighlights = [
     title: "Strategic reporting",
     description:
       "We connect creative output with numbers that matter so you always know next steps.",
+  },
+];
+
+const campaignSteps = [
+  {
+    title: "Discovery & Planning",
+    description:
+      "We align on your goal, audience, timing, and the win condition for the campaign window.",
+  },
+  {
+    title: "Strategy & Setup",
+    description:
+      "You receive a clear roadmap covering channels, creative direction, deliverables, and approvals.",
+  },
+  {
+    title: "Execution",
+    description:
+      "Content, paid media, engagement, and optimisation handled daily by our team during the run.",
+  },
+  {
+    title: "Reporting & Review",
+    description:
+      "Receive a concise performance recap with insights, learnings, and next-step recommendations.",
+  },
+];
+
+const campaignPackages = [
+  {
+    tag: "Kickstart",
+    title: "1-Month Kickstart Campaign",
+    summary: "Audit + strategy + first month of content",
+    detail: "Perfect for new or rebranding businesses that need momentum fast.",
+    duration: "4 weeks",
+  },
+  {
+    tag: "Growth",
+    title: "3-Month Growth Campaign",
+    summary: "Full funnel: social, ads, email, and SEO push",
+    detail: "Includes monthly performance reviews and optimisations.",
+    duration: "12 weeks",
+  },
+  {
+    tag: "Launch",
+    title: "Custom Launch Campaign",
+    summary: "Tailored build for store, event, or product launches",
+    detail: "Creative direction, ad management, and reporting baked in.",
+    duration: "Flexible",
   },
 ];
 
@@ -159,6 +205,117 @@ AFFORDABLE services, tailored to your business needs.
 </div>
 </section>
 
+<section id="campaigns" className="bg-muted/10">
+  <div className="container mx-auto max-w-6xl px-4 py-16 space-y-10">
+    <div className="space-y-4">
+      <Badge
+        variant="secondary"
+        className="w-fit rounded-full px-4 py-1 text-[0.7rem] uppercase tracking-widest"
+      >
+        Campaigns
+      </Badge>
+      <h2 className="text-3xl font-semibold tracking-tight md:text-4xl">
+        Focused marketing pushes with a clear beginning, middle, and end.
+      </h2>
+      <p className="text-base leading-relaxed text-muted-foreground md:max-w-3xl">
+        Campaign packages are designed for launches, openings, and key seasons. Each runs for a defined 4-12
+        week window covering strategy, content, ads, and reporting so you get a burst of visibility and sales
+        momentum without committing to a long-term retainer.
+      </p>
+    </div>
+
+    <div className="grid gap-8 lg:grid-cols-[1.2fr,0.8fr]">
+      <Card className="h-full border border-border/70 shadow-md shadow-primary/5">
+        <CardHeader className="space-y-2">
+          <CardTitle>Your campaign, handled end-to-end.</CardTitle>
+          <CardDescription>
+            Whatever the objective, we keep every moving part aligned and on schedule.
+          </CardDescription>
+        </CardHeader>
+        <CardContent className="space-y-4 text-sm leading-relaxed text-muted-foreground">
+          <p>
+            Expect a dedicated team syncing daily on creative, publishing, ads, and engagement while you focus on
+            running the business. Every deliverable, approval, and performance snapshot is centralised so it feels
+            effortless on your side.
+          </p>
+          <ul className="space-y-3 text-sm">
+            <li className="flex gap-3">
+              <span className="mt-0.5 text-base">-</span>
+              <span>Strategy-first planning session to nail the win condition.</span>
+            </li>
+            <li className="flex gap-3">
+              <span className="mt-0.5 text-base">-</span>
+              <span>Content, ads, and social touchpoints coordinated across platforms.</span>
+            </li>
+            <li className="flex gap-3">
+              <span className="mt-0.5 text-base">-</span>
+              <span>Performance insights and recommendations at wrap-up.</span>
+            </li>
+          </ul>
+        </CardContent>
+      </Card>
+
+      <Card className="border border-primary/30 bg-background shadow-lg shadow-primary/10">
+        <CardHeader>
+          <CardTitle>How it works</CardTitle>
+          <CardDescription>Four phases you can follow at a glance.</CardDescription>
+        </CardHeader>
+        <CardContent>
+          <Accordion type="single" collapsible defaultValue="step-0">
+            {campaignSteps.map((step, index) => (
+              <AccordionItem key={step.title} value={`step-${index}`}>
+                <AccordionTrigger>
+                  <div className="flex flex-col text-left">
+                    <span className="text-xs font-semibold uppercase tracking-widest text-muted-foreground">
+                      Step {index + 1}
+                    </span>
+                    <span>{step.title}</span>
+                  </div>
+                </AccordionTrigger>
+                <AccordionContent>{step.description}</AccordionContent>
+              </AccordionItem>
+            ))}
+          </Accordion>
+        </CardContent>
+      </Card>
+    </div>
+
+    <div className="space-y-4">
+      <div className="flex flex-col gap-2">
+        <h3 className="text-2xl font-semibold">Campaign packages</h3>
+        <p className="text-base text-muted-foreground">
+          Pick a preset or brief us on a custom sprint - either way you get a focused marketing push tailored to
+          your timeline.
+        </p>
+      </div>
+      <div className="grid gap-6 md:grid-cols-2 xl:grid-cols-3">
+        {campaignPackages.map((pkg) => (
+          <Card
+            key={pkg.title}
+            className="flex h-full flex-col border border-border/80 bg-card/90 shadow-sm transition hover:-translate-y-1 hover:border-primary/40 hover:shadow-lg"
+          >
+            <CardHeader className="space-y-2">
+              <div className="flex items-center gap-2">
+                <Badge variant="secondary" className="rounded-full px-3 py-1 text-[0.65rem] uppercase tracking-widest">
+                  {pkg.tag}
+                </Badge>
+                <CardTitle className="text-xl">{pkg.title}</CardTitle>
+              </div>
+              <CardDescription>{pkg.summary}</CardDescription>
+            </CardHeader>
+            <CardContent className="flex-1 space-y-4 text-sm leading-relaxed text-muted-foreground">
+              <p>{pkg.detail}</p>
+              <Badge variant="outline" className="w-fit rounded-full border-primary/40 text-xs">
+                {pkg.duration}
+              </Badge>
+            </CardContent>
+          </Card>
+        ))}
+      </div>
+    </div>
+  </div>
+</section>
+
     <section id="proof" className="container mx-auto max-w-6xl px-4 py-16">
       <h2 className="text-2xl md:text-3xl font-semibold tracking-tight mb-6">Portfolio</h2>
 
@@ -184,7 +341,6 @@ AFFORDABLE services, tailored to your business needs.
     </section>
   </main>
   <Footer />
-  <Toaster position="top-center" />
 </>
 );
 }
