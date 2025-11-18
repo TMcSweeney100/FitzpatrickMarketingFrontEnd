@@ -7,8 +7,23 @@ import {
   Facebook,
   Instagram,
   Linkedin,
-  Github,
 } from "lucide-react";
+
+const TiktokIcon = ({ className, ...props }) => (
+  <svg
+    viewBox="0 0 24 24"
+    fill="none"
+    stroke="currentColor"
+    strokeWidth="1.8"
+    strokeLinecap="round"
+    strokeLinejoin="round"
+    className={className}
+    {...props}
+  >
+    <path d="M15 3v5.2c0 2.6 2 4.6 4.5 4.6" />
+    <path d="M9.4 11.2a4.6 4.6 0 104.6 4.5V6.6" />
+  </svg>
+);
 
 export default function Footer() {
   const year = new Date().getFullYear();
@@ -70,31 +85,39 @@ export default function Footer() {
             <div className="flex items-center gap-3 text-muted-foreground">
               <a
                 aria-label="Facebook"
-                href="#"
+                href="https://www.facebook.com/profile.php?id=61583426980077"
+                target="_blank"
+                rel="noreferrer"
                 className="rounded-full border border-border p-2 transition hover:bg-background hover:text-foreground"
               >
                 <Facebook className="h-4 w-4" />
               </a>
               <a
                 aria-label="Instagram"
-                href="#"
+                href="https://www.instagram.com/fitzpatrickmarketing/"
+                target="_blank"
+                rel="noreferrer"
                 className="rounded-full border border-border p-2 transition hover:bg-background hover:text-foreground"
               >
                 <Instagram className="h-4 w-4" />
               </a>
               <a
+                aria-label="TikTok"
+                href="https://www.tiktok.com/@fitzpatrickmarketing?is_from_webapp=1&sender_device=pc"
+                target="_blank"
+                rel="noreferrer"
+                className="rounded-full border border-border p-2 transition hover:bg-background hover:text-foreground"
+              >
+                <TiktokIcon className="h-4 w-4" />
+              </a>
+              <a
                 aria-label="LinkedIn"
-                href="#"
+                href="https://www.linkedin.com/company/fitzpatrick-marketing"
+                target="_blank"
+                rel="noreferrer"
                 className="rounded-full border border-border p-2 transition hover:bg-background hover:text-foreground"
               >
                 <Linkedin className="h-4 w-4" />
-              </a>
-              <a
-                aria-label="GitHub"
-                href="#"
-                className="rounded-full border border-border p-2 transition hover:bg-background hover:text-foreground"
-              >
-                <Github className="h-4 w-4" />
               </a>
             </div>
           </div>
