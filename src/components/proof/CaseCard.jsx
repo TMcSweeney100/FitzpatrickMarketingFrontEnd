@@ -4,6 +4,7 @@ import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import {
   Dialog,
+  DialogClose,
   DialogContent,
   DialogDescription,
   DialogHeader,
@@ -15,7 +16,7 @@ function CaseCard({ title, client, tags = [], summary, logo, quote, person, role
   const logoLabel = logo ?? client?.charAt(0) ?? "?";
 
   return (
-    <Card className="flex h-full flex-col border border-border/70 shadow-sm hover:border-primary/40 transition">
+    <Card className="flex h-full flex-col border border-border/70 shadow-sm transition hover:border-primary/40">
       <CardHeader className="space-y-4">
         <div className="flex items-center gap-4">
           <div className="flex h-14 w-14 items-center justify-center rounded-2xl bg-muted text-base font-semibold text-muted-foreground">
@@ -36,27 +37,26 @@ function CaseCard({ title, client, tags = [], summary, logo, quote, person, role
           </div>
         ) : null}
       </CardHeader>
-      <CardContent className="flex-1 text-sm leading-relaxed text-muted-foreground">
-        {summary}
-      </CardContent>
+      <CardContent className="flex-1 text-sm leading-relaxed text-muted-foreground">{summary}</CardContent>
       {quote ? (
         <CardFooter className="border-t border-border/70 bg-muted/30">
           <Dialog>
             <DialogTrigger asChild>
-              <Button className="w-full" variant="default">
+              <Button className="w-full border border-primary/40 bg-primary/90 text-primary-foreground shadow-sm transition hover:bg-primary">
                 View testimonial
               </Button>
             </DialogTrigger>
-            <DialogContent className="max-w-xl space-y-4">
-              <DialogHeader>
-                <DialogTitle>{client}</DialogTitle>
-                <DialogDescription>{title}</DialogDescription>
+            <DialogContent className="max-w-xl space-y-6 border-2 border-primary/70 bg-card/95 p-8 shadow-2xl shadow-primary/30 sm:rounded-2xl">
+              <DialogHeader className="space-y-1">
+                <DialogTitle className="text-2xl">{client}</DialogTitle>
+                <DialogDescription className="text-base text-muted-foreground">{title}</DialogDescription>
+                 <DialogDescription className="text-base text-muted-foreground">{person} {role}</DialogDescription>
               </DialogHeader>
-              <p className="text-base leading-relaxed text-foreground">{quote}</p>
-              <div className="text-sm font-medium text-muted-foreground">
-                {person}
-                {role ? ` · ${role}` : null}
+              <div className="rounded-2xl border border-border/70 bg-muted/20 p-6 text-base leading-relaxed text-foreground">
+                <p className="mb-3 text-xs font-semibold uppercase tracking-[0.3em] text-primary">Testimonial</p>
+                <p className="text-lg">{quote}</p>
               </div>
+              
             </DialogContent>
           </Dialog>
         </CardFooter>
