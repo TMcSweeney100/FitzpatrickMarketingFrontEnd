@@ -182,9 +182,7 @@ function App() {
         </CardDescription>
       </CardHeader>
       <CardContent className="space-y-4">
-        <p className="text-xs font-semibold uppercase tracking-[0.2em] text-muted-foreground">
-          Hover to look closer
-        </p>
+       
         <div className="flex flex-wrap gap-3">
           {hoverHighlights.map((item) => (
             <HoverCard key={item.title} openDelay={80}>
