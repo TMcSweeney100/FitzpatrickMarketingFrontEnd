@@ -431,7 +431,7 @@ AFFORDABLE services, tailored to your business needs.
               </CarouselItem>
             ))}
           </CarouselContent>
-          <div className="absolute -bottom-16 right-0 flex items-center gap-2">
+          <div className="absolute -bottom-20 left-10 right-10 flex items-center gap-2">
             <CarouselPrevious />
             <CarouselNext />
           </div>
