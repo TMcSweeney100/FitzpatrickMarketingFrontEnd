@@ -162,10 +162,10 @@ function ContactForm() {
               <p className="text-sm font-semibold uppercase tracking-wider text-primary">
                 Let's make it happen
               </p>
-              <h2 className="text-3xl font-semibold tracking-tight md:text-4xl">
+              <h2>
                 Share what success looks like and we will build the plan.
               </h2>
-              <p className="text-base leading-relaxed text-muted-foreground">
+              <p>
                 Fill out the form with the essentials and we will come back to
                 you within 24 hours. Prefer email? Reach us anytime at{" "}
                 <a
@@ -189,7 +189,7 @@ function ContactForm() {
                   </div>
                   <div>
                     <p className="font-medium">Rapid first response</p>
-                    <p className="text-sm leading-relaxed text-muted-foreground">
+                    <p className="text-sm">
                       You will receive a confirmation and tailored follow-up
                       within one business day.
                     </p>
@@ -201,7 +201,7 @@ function ContactForm() {
                   </div>
                   <div>
                     <p className="font-medium">Discovery & alignment</p>
-                    <p className="text-sm leading-relaxed text-muted-foreground">
+                    <p className="text-sm">
                       We schedule a 20 minute session to clarify goals, budget,
                       and timelines so we can shape the right mix.
                     </p>
@@ -213,7 +213,7 @@ function ContactForm() {
                   </div>
                   <div>
                     <p className="font-medium">Your action plan</p>
-                    <p className="text-sm leading-relaxed text-muted-foreground">
+                    <p className="text-sm">
                       Expect a concise roadmap outlining deliverables, expected
                       impact, and the fastest way to get started.
                     </p>
@@ -221,7 +221,7 @@ function ContactForm() {
                 </li>
               </ul>
               <div className="rounded-2xl border border-primary/20 bg-background/70 p-4 text-sm leading-relaxed text-muted-foreground shadow-inner">
-                <p className="font-medium text-foreground">Need a direct line?</p>
+                <p className="font-medium">Need a direct line?</p>
                 <div className="mt-3 space-y-2">
                   <a
                     className="flex items-center gap-2 hover:text-foreground"

@@ -195,10 +195,8 @@ function App() {
                 </Badge>
               </HoverCardTrigger>
               <HoverCardContent align="start" className="w-72">
-                <p className="text-sm font-semibold text-foreground">{item.title}</p>
-                <p className="mt-2 text-sm leading-relaxed text-muted-foreground">
-                  {item.description}
-                </p>
+                <p className="text-sm font-semibold">{item.title}</p>
+                <p className="mt-2 text-sm">{item.description}</p>
               </HoverCardContent>
             </HoverCard>
           ))}
@@ -263,13 +261,13 @@ function App() {
 </section>
 
 <section id="services" className="container mx-auto max-w-6xl px-4 py-16">
-<h2 className="text-2xl md:text-3xl font-semibold tracking-tight">Services</h2>
-<p className="mt-3 text-base text-muted-foreground">
-AFFORDABLE services, tailored to your business needs.
-</p>
-<div className="mt-8">
-<Services/>
-</div>
+  <h2>Services</h2>
+  <p className="mt-3">
+    AFFORDABLE services, tailored to your business needs.
+  </p>
+  <div className="mt-8">
+    <Services />
+  </div>
 </section>
 
 <section id="campaigns" className="bg-muted/10">
@@ -281,10 +279,10 @@ AFFORDABLE services, tailored to your business needs.
       >
         Campaigns
       </Badge>
-      <h2 className="text-3xl font-semibold tracking-tight md:text-4xl">
+      <h2>
         Focused marketing pushes with a clear beginning, middle, and end.
       </h2>
-      <p className="text-base leading-relaxed text-muted-foreground md:max-w-3xl">
+      <p className="md:max-w-3xl">
         Campaign packages are designed for launches, openings, and key seasons. Each runs for a defined 4-12
         week window covering strategy, content, ads, and reporting so you get a burst of visibility and sales
         momentum without committing to a long-term retainer.
@@ -299,7 +297,7 @@ AFFORDABLE services, tailored to your business needs.
             Whatever the objective, we keep every moving part aligned and on schedule.
           </CardDescription>
         </CardHeader>
-        <CardContent className="space-y-4 text-sm leading-relaxed text-muted-foreground">
+        <CardContent className="space-y-4 text-sm">
           <p>
             Expect a dedicated team syncing daily on creative, publishing, ads, and engagement while you focus on
             running the business. Every deliverable, approval, and performance snapshot is centralised so it feels
@@ -347,14 +345,14 @@ AFFORDABLE services, tailored to your business needs.
       </Card>
     </div>
 
-    <div className="space-y-4">
-      <div className="flex flex-col gap-2">
-        <h3 className="text-2xl font-semibold">Campaign packages</h3>
-        <p className="text-base text-muted-foreground">
-          Pick a preset or brief us on a custom sprint - either way you get a focused marketing push tailored to
-          your timeline.
-        </p>
-      </div>
+      <div className="space-y-4">
+        <div className="flex flex-col gap-2">
+          <h3>Campaign packages</h3>
+          <p>
+            Pick a preset or brief us on a custom sprint - either way you get a focused marketing push tailored to
+            your timeline.
+          </p>
+        </div>
       <div className="grid gap-6 md:grid-cols-2 xl:grid-cols-3">
         {campaignPackages.map((pkg) => (
           <Card
@@ -370,7 +368,7 @@ AFFORDABLE services, tailored to your business needs.
               </div>
               <CardDescription>{pkg.summary}</CardDescription>
             </CardHeader>
-            <CardContent className="flex-1 space-y-4 text-sm leading-relaxed text-muted-foreground">
+            <CardContent className="flex-1 space-y-4 text-sm text-muted-foreground">
               <p>{pkg.detail}</p>
               <Badge variant="outline" className="w-fit rounded-full border-primary/40 text-xs">
                 {pkg.duration}
@@ -392,10 +390,10 @@ AFFORDABLE services, tailored to your business needs.
       >
         About us
       </Badge>
-      <h2 className="text-3xl font-semibold tracking-tight md:text-4xl">
+      <h2>
         Our story is rooted in making modern marketing feel within reach.
       </h2>
-      <p className="text-base leading-relaxed text-muted-foreground">
+      <p>
         Fitzpatrick Marketing was born from a desire to give business owners the kind of partnership we
         wished existed for ourselves: practical, transparent, and obsessed with outcomes. Hover through the
         chapters to see how we got here.
@@ -422,8 +420,8 @@ AFFORDABLE services, tailored to your business needs.
           <CarouselContent>
             {storySlides.map((story) => (
               <CarouselItem key={story.heading}>
-                <div className="space-y-4 text-base leading-relaxed text-muted-foreground">
-                  <h3 className="text-xl font-semibold text-foreground">{story.heading}</h3>
+                <div className="space-y-4">
+                  <h3>{story.heading}</h3>
                   {story.body.map((paragraph, idx) => (
                     <p key={idx}>{paragraph}</p>
                   ))}
@@ -456,10 +454,10 @@ AFFORDABLE services, tailored to your business needs.
         >
           Clients & testimonials
         </Badge>
-        <h2 className="text-2xl md:text-3xl font-semibold tracking-tight md:text-4xl">
+        <h2>
           Stories from the brands we champion.
         </h2>
-        <p className="text-base text-muted-foreground md:max-w-3xl">
+        <p className="md:max-w-3xl">
           Each engagement starts with a clear goal and ends with measurable results. Click any client to read their
           testimonial and see how we collaborated.
         </p>

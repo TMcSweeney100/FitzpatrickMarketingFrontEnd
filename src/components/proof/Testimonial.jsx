@@ -18,7 +18,7 @@ export default function Testimonial({ name, role, quote, avatar }) {
           </div>
         </div>
         <Separator className="my-4" />
-        <p className="text-sm leading-6">“{quote}”</p>
+        <p className="text-sm">�?o{quote}�??</p>
       </CardContent>
     </Card>
   );

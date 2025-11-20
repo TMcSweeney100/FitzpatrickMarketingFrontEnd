@@ -37,7 +37,7 @@ function CaseCard({ title, client, tags = [], summary, logo, quote, person, role
           </div>
         ) : null}
       </CardHeader>
-      <CardContent className="flex-1 text-sm leading-relaxed text-muted-foreground">{summary}</CardContent>
+      <CardContent className="flex-1 text-sm text-muted-foreground">{summary}</CardContent>
       {quote ? (
         <CardFooter className="border-t border-border/70 bg-muted/30">
           <Dialog>
@@ -54,7 +54,7 @@ function CaseCard({ title, client, tags = [], summary, logo, quote, person, role
               </DialogHeader>
               <div className="rounded-2xl border border-border/70 bg-muted/20 p-6 text-base leading-relaxed text-foreground">
                 <p className="mb-3 text-xs font-semibold uppercase tracking-[0.3em] text-primary">Testimonial</p>
-                <p className="text-lg">{quote}</p>
+                <p className="text-lg leading-relaxed">{quote}</p>
               </div>
               
             </DialogContent>

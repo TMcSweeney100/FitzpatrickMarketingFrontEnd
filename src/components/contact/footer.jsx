@@ -36,10 +36,10 @@ export default function Footer() {
             <p className="text-sm font-semibold uppercase tracking-widest text-primary">
               Fitzpatrick Marketing
             </p>
-            <h3 className="text-3xl font-semibold leading-tight md:text-4xl">
+            <h3>
               Affordable, modern marketing built around your goals.
             </h3>
-            <p className="text-sm leading-relaxed text-muted-foreground md:text-base">
+            <p className="text-sm md:text-base">
               From social to search, we plug into your business and keep the
               momentum going. Ready when you are? Email{" "}
               <a
@@ -53,7 +53,7 @@ export default function Footer() {
           </div>
 
           <div className="space-y-4 text-sm">
-            <h4 className="text-base font-semibold tracking-tight text-foreground">
+            <h4 className="text-base font-semibold tracking-tight">
               Visit or call
             </h4>
             <div className="space-y-3 text-muted-foreground">
@@ -79,7 +79,7 @@ export default function Footer() {
           </div>
 
           <div className="space-y-4 text-sm">
-            <h4 className="text-base font-semibold tracking-tight text-foreground">
+            <h4 className="text-base font-semibold tracking-tight">
               Stay connected
             </h4>
             <div className="flex items-center gap-3 text-muted-foreground">
