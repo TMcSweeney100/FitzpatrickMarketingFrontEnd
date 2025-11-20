@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import {
   Card,
   CardContent,
@@ -29,6 +29,7 @@ const initialFormState = {
   website: "",
   budget: "",
   message: "",
+  website2: "",
 };
 
 const budgetOptions = [
@@ -39,24 +40,117 @@ const budgetOptions = [
   { value: "retainer", label: "Monthly retainer (custom)" },
 ];
 
+const turnstileSiteKey = import.meta.env.VITE_TURNSTILE_SITE_KEY;
+
+const errorMessages = {
+  invalid_input: "Please double-check the form and complete all required fields.",
+  message_too_long: "Please keep your message under 1000 characters.",
+  captcha_failed: "Please complete the verification challenge and try again.",
+  server_error:
+    "Something went wrong while sending your enquiry. Please email us directly at hello@fitzpatrickmarketing.org.",
+};
+
 function ContactForm() {
   const [formValues, setFormValues] = useState(initialFormState);
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [captchaToken, setCaptchaToken] = useState("");
+  const turnstileWidgetIdRef = useRef(null);
+  const turnstileTimeoutRef = useRef(null);
+
+  useEffect(() => {
+    if (typeof window === "undefined" || !turnstileSiteKey || turnstileWidgetIdRef.current) {
+      return;
+    }
+
+    const renderTurnstile = () => {
+      if (window.turnstile) {
+        turnstileWidgetIdRef.current = window.turnstile.render("#cf-turnstile", {
+          sitekey: turnstileSiteKey,
+          callback: (token) => setCaptchaToken(token),
+          "expired-callback": () => setCaptchaToken(""),
+          "error-callback": () => setCaptchaToken(""),
+        });
+      } else {
+        turnstileTimeoutRef.current = setTimeout(renderTurnstile, 250);
+      }
+    };
+
+    renderTurnstile();
+
+    return () => {
+      if (turnstileTimeoutRef.current) {
+        clearTimeout(turnstileTimeoutRef.current);
+      }
+    };
+  }, [turnstileSiteKey]);
 
   const handleChange = (event) => {
     const { name, value } = event.target;
     setFormValues((prev) => ({ ...prev, [name]: value }));
   };
 
-  const handleSubmit = (event) => {
+  const resetTurnstile = () => {
+    setCaptchaToken("");
+    if (
+      typeof window !== "undefined" &&
+      window.turnstile &&
+      turnstileWidgetIdRef.current !== null
+    ) {
+      window.turnstile.reset(turnstileWidgetIdRef.current);
+    }
+  };
+
+  const showErrorToast = (code = "server_error") => {
+    const message = errorMessages[code] || errorMessages.server_error;
+    toast.error(message);
+    if (code === "captcha_failed") {
+      resetTurnstile();
+    }
+  };
+
+  const handleSubmit = async (event) => {
     event.preventDefault();
 
-    toast({
-      title: "Thank you for reaching out!",
-      description: "We will reply within 24 hours with the next steps.",
-    });
+    if (!captchaToken) {
+      toast.error("Please complete the verification before submitting.");
+      return;
+    }
 
-    setFormValues(initialFormState);
+    setIsSubmitting(true);
+
+    try {
+      const response = await fetch("/api/enquiry", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+          ...formValues,
+          captchaToken,
+        }),
+      });
+
+      const result = await response.json().catch(() => ({}));
+
+      if (response.ok && result.ok) {
+        toast({
+          title: "Thank you for reaching out!",
+          description: "We will reply within 24 hours with the next steps.",
+        });
+        setFormValues(initialFormState);
+        resetTurnstile();
+        return;
+      }
+
+      showErrorToast(result.error);
+    } catch (error) {
+      showErrorToast("server_error");
+    } finally {
+      setIsSubmitting(false);
+    }
   };
+
+  const isSubmitDisabled = isSubmitting || !captchaToken;
 
   return (
     <>
@@ -215,7 +309,6 @@ function ContactForm() {
                     value={formValues.website}
                     onChange={handleChange}
                     placeholder="https://yourwebsite.com, @yourhandle"
-                    required
                   />
                 </div>
 
@@ -250,13 +343,28 @@ function ContactForm() {
                     placeholder="Tell us where you need the biggest lift and any deadlines we should know about."
                     rows={5}
                     required
+                    maxLength={1000}
+                  />
+                </div>
+
+                <div className="sr-only">
+                  <Label htmlFor="website2">Leave this field empty</Label>
+                  <Input
+                    id="website2"
+                    name="website2"
+                    value={formValues.website2}
+                    onChange={handleChange}
+                    tabIndex={-1}
+                    autoComplete="off"
                   />
                 </div>
 
                 <CardFooter className="flex flex-col items-start gap-3 px-0">
+                  <div id="cf-turnstile" className="cf-turnstile" />
                   <Button
                     type="submit"
                     className="w-full bg-primary text-primary-foreground shadow hover:bg-primary/90"
+                    disabled={isSubmitDisabled}
                   >
                     Submit your enquiry
                   </Button>
