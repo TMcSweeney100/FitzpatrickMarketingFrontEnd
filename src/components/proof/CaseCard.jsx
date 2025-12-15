@@ -11,9 +11,11 @@ import {
   DialogTitle,
   DialogTrigger,
 } from "@/components/ui/dialog";
+import { Star } from "lucide-react";
 
 function CaseCard({ title, client, tags = [], summary, logo, quote, person, role }) {
   const logoLabel = client?.charAt(0) ?? "?";
+  const stars = Array.from({length:5});
 
   return (
     <Card className="flex h-full flex-col border border-border/70 shadow-sm transition hover:border-primary/40">
@@ -36,6 +38,19 @@ function CaseCard({ title, client, tags = [], summary, logo, quote, person, role
             <p className="text-sm text-muted-foreground">{title}</p>
           </div>
         </div>
+
+        <div className="flex items-center gap-1 text-amber-500">
+          {stars.map((_, idx) =>(
+              <Star 
+              key={idx}
+              className="h-4 w-4 fill-current"
+              strokeWidth={1.25}
+              
+              />
+
+          ) )}
+          
+          </div> 
         {tags.length ? (
           <div className="flex flex-wrap gap-2">
             {tags.map((tag) => (
