@@ -163,11 +163,10 @@ function ContactForm() {
                 Let's make it happen
               </p>
               <h2>
-                Share what success looks like and we will build the plan.
+                Claim your FREE roadmap (worth €350) by filling out the form Below!
               </h2>
               <p>
-                Fill out the form with the essentials and we will come back to
-                you within 24 hours. Prefer email? Reach us anytime at{" "}
+                HURRY only 5 spots available…  First come first Served! {" "}
                 <a
                   className="font-medium text-foreground underline underline-offset-4"
                   href="mailto:fitzpatrick_marketing@outlook.com"
@@ -190,8 +189,7 @@ function ContactForm() {
                   <div>
                     <p className="font-medium">Rapid first response</p>
                     <p className="text-sm">
-                      You will receive a confirmation and tailored follow-up
-                      within one business day.
+                      You will receive a confirmation and request to book your strategy call! 
                     </p>
                   </div>
                 </li>
@@ -202,8 +200,7 @@ function ContactForm() {
                   <div>
                     <p className="font-medium">Discovery & alignment</p>
                     <p className="text-sm">
-                      We schedule a 20 minute session to clarify goals, budget,
-                      and timelines so we can shape the right mix.
+                      We speak about your business, I get an understanding of where you are at and how this plan could add the most value possible.  
                     </p>
                   </div>
                 </li>
@@ -212,10 +209,9 @@ function ContactForm() {
                     <MessageSquare className="h-5 w-5" />
                   </div>
                   <div>
-                    <p className="font-medium">Your action plan</p>
+                    <p className="font-medium">Your Roadmap </p>
                     <p className="text-sm">
-                      Expect a concise roadmap outlining deliverables, expected
-                      impact, and the fastest way to get started.
+                      Will be delivered between 5-7 business days from our strategy call, and the its time for you to IMPLEMENT it, and reap the Rewards! 
                     </p>
                   </div>
                 </li>
@@ -244,9 +240,9 @@ function ContactForm() {
 
           <Card className="border border-border/70 shadow-lg shadow-primary/5">
             <CardHeader className="space-y-1">
-              <CardTitle>Tell us about your project</CardTitle>
+              <CardTitle>Get In Touch With Us</CardTitle>
               <CardDescription>
-                We use this information to map the right team and next steps.
+                We Will Respond Within 24hrs
               </CardDescription>
             </CardHeader>
             <CardContent>
@@ -311,7 +307,7 @@ function ContactForm() {
                     placeholder="https://yourwebsite.com, @yourhandle"
                   />
                 </div>
-
+{/* 
                 <div className="grid gap-2">
                   <Label htmlFor="budget">Budget range</Label>
                   <select
@@ -331,7 +327,7 @@ function ContactForm() {
                       </option>
                     ))}
                   </select>
-                </div>
+                </div> */}
 
                 <div className="grid gap-2">
                   <Label htmlFor="message">Message / goals</Label>

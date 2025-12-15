@@ -37,7 +37,7 @@ function Header() {
 
   <Separator orientation="vertical" className="h-5" />
   <Button size="sm" variant="default"asChild className=" transition-transform hover:translate-y-[-1px] ">
-  <a href="#contact">Get Free Value Proposition</a>
+  <a href="#contact">Claim Free Roadmmap (Worth €350)” </a>
 </Button>
  
 </nav>
