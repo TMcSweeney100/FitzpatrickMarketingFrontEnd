@@ -34,6 +34,10 @@ import {
 } from "@/components/ui/carousel";
 import "./App.css";
 
+import pizzaLogo from "./logos/pizzaP.png"
+import daffyLogo from "./logos/daffy.png"
+import baseLogo from "./logos/basecamp.png"
+
 const hoverHighlights = [
   {
     title: "Affordable retainers",
@@ -127,6 +131,7 @@ const clientStories = [
   {
     client: "Pizza Planet 2",
     title: "Website refresh",
+    logo: pizzaLogo,
     tags: ["Web", "Brand"],
     summary:
       "Rebuilt their ordering experience with a sharp brand system and conversion-focused landing flows.",
@@ -138,6 +143,7 @@ const clientStories = [
   {
     client: "Daffy Car Sales",
     title: "Social media revamp",
+    logo: daffyLogo,
     tags: ["Social Media", "Ads"],
     summary:
       "Designed a cohesive content engine plus paid amplification to keep the dealership top of feed.",
@@ -149,6 +155,7 @@ const clientStories = [
   {
     client: "Basecamp Adventure Park",
     title: "New website and launch",
+    logo: baseLogo,
     tags: ["Brand", "Web"],
     summary:
       "Captured the park story through new visuals, site architecture, and seasonal activation campaigns.",

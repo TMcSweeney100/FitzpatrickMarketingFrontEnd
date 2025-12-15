@@ -13,14 +13,23 @@ import {
 } from "@/components/ui/dialog";
 
 function CaseCard({ title, client, tags = [], summary, logo, quote, person, role }) {
-  const logoLabel = logo ?? client?.charAt(0) ?? "?";
+  const logoLabel = client?.charAt(0) ?? "?";
 
   return (
     <Card className="flex h-full flex-col border border-border/70 shadow-sm transition hover:border-primary/40">
       <CardHeader className="space-y-4">
         <div className="flex items-center gap-4">
-          <div className="flex h-14 w-14 items-center justify-center rounded-2xl bg-muted text-base font-semibold text-muted-foreground">
-            {logoLabel}
+          <div className="flex h-14 w-14 items-center justify-center rounded-2xl bg-muted text-base font-semibold text-muted-foreground overflow-hidden">
+            {logo ? (
+              <img
+                src={logo}
+                alt={`${client} logo`}
+                className="h-full w-full object-contain"
+                loading="lazy"
+              />
+            ) : (
+              <span>{logoLabel}</span>
+            )}
           </div>
           <div>
             <CardTitle className="text-lg">{client}</CardTitle>
