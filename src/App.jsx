@@ -34,7 +34,6 @@ import {
 } from "@/components/ui/carousel";
 import "./App.css";
 
-import pizzaLogo from "./logos/pizzaP.png"
 import daffyLogo from "./logos/daffy.png"
 import baseLogo from "./logos/basecamp.png"
 
@@ -129,40 +128,201 @@ const storySlides = [
 
 const clientStories = [
   {
-    client: "Pizza Planet 2",
-    title: "Website refresh",
-    logo: pizzaLogo,
-    tags: ["Web", "Brand"],
+    client: "Basecamp Adventure Park",
+    title: "Case Study 1",
+    logo: baseLogo,
+    tags: ["Outdoor experiences", "Web + Social", "Training"],
     summary:
-      "Rebuilt their ordering experience with a sharp brand system and conversion-focused landing flows.",
+      "Outdoor paintball arena in Shanagolden. A structured digital reset across web, UX, content, and training lifted bookings by ~50% with 1200% ROAS in six weeks.",
     quote:
-      "Working with Fitzpatrick Marketing gave us the consistency and professional touch we had been missing. Everything was handled with direction and purpose, and the results went beyond what we expected.",
-    person: "Shah Safi",
-    role: "Manager",
+      "The new website and a more put together approach to our socials made a real difference to our bookings. The training meant even more, our team can continue to develop it in-house long-term, I couldn't recommend Fitpatrick Marketing enough.",
+    person: "Eoin Tucker",
+    role: "Operations Manager",
+    sections: [
+      {
+        heading: "Business Background",
+        paragraphs: [
+          "Basecamp Adventure Park is an outdoor paintball arena business based in Shanagolden, Co. Limerick. It serves families, schools, and general group bookings of many types.",
+          "The business operates all year round and has 20+ years serving customers from all over Limerick, Cork, North Kerry, Tipperary and beyond. It is one of Limericks few experiential based",
+        ],
+      },
+      {
+        heading: "The Challenge",
+        paragraphs: [
+          "The business had experienced a prolonged period of limited and unstructured digital activity during a phase of significant internal change and brand development. The existing website no longer reflected the current offering, social media activity lacked strategic direction, and marketing spend was being applied to organic and paid activity without a defined plan or measurable objectives. As a result, digital channels were underperforming in supporting bookings and informing customer base.",
+        ],
+      },
+      {
+        heading: "The Strategy",
+        paragraphs: [
+          "We delivered a structured, project-based digital reset focused on establishing strong digital foundations, improving user experience, and enabling more effective use of organic and paid social media.",
+          "The strategy prioritised:",
+        ],
+        bullets: [
+          "Website and UX redevelopment aligned with the customer booking journey",
+          "Mobile-first optimisation",
+          "Structured content planning",
+          "Creation of reusable creative assets",
+          "Knowledge transfer to the in-house team",
+        ],
+      },
+      {
+        heading: "Services Provided",
+        bullets: [
+          "Website redesign and content update",
+          "UX and mobile experience optimisation",
+          "Google Business Profile setup and optimisation",
+          "Social media content calendar development",
+          "On-site content shoots and creative asset development",
+          "Paid social media campaign structure and setup",
+          "Social media and paid advertising training for in-house staff",
+          "UX coaching focused on enquiry and booking pathways",
+        ],
+      },
+      {
+        heading: "The Results (6-week period)",
+        bullets: [
+          "Approx. 50% increase in bookings compared to the previous six-week period",
+          "Significant uplift in online engagement across social media channels",
+          "Measurable growth in social media followers and reach",
+          "Paid ad campaigns delivering 1200% ROAS.",
+          "Improved user experience, particularly on mobile devices",
+          "Clear, repeatable content and advertising framework established for future seasons",
+        ],
+      },
+    ],
   },
   {
-    client: "Daffy Car Sales",
-    title: "Social media revamp",
+    client: "Daffy's Bar",
+    title: "Case Study 2",
     logo: daffyLogo,
-    tags: ["Social Media", "Ads"],
+    tags: ["Hospitality", "Social strategy", "Community"],
     summary:
-      "Designed a cohesive content engine plus paid amplification to keep the dealership top of feed.",
+      "Local bar in Croom rebuilt its digital presence, consolidated accounts, launched TikTok, and grew 300+ organic followers per platform in six weeks with staff training.",
     quote:
-      "We had tried posting in-house but lacked structure. Fitzpatrick Marketing brought design, strategy, and professionalism that made a huge difference. Campaigns exceeded promises and strengthened our presence.",
+      "He helped us rebuild our Facebook and other accounts fast. The plan and training helped us take over with confidence when it all finished, and the community response was very positive the difference in the bar and customers is like night and day.",
     person: "Michael Daffy",
     role: "Owner",
+    sections: [
+      {
+        heading: "Background on the Business",
+        paragraphs: [
+          "Daffy's Bar is a local hospitality business operating in Croom, Co. Limerick. Hospitality as a highly competitive, footfall-driven market - social media plays a key role in awareness, promotions, and customer engagement.",
+          "Having taken over form previous ownership who neglected the establishment and damaged its local reputation works were being undertaken to improve the interior and expand with a new beer garden.",
+        ],
+      },
+      {
+        heading: "The Challenge",
+        paragraphs: [
+          "The business was experiencing challenges across its digital presence, including multiple unmanaged social media accounts, brand inconsistency, and reputational impact following changes to the premises. At the same time, the bar needed to effectively promote its newly refurbished interior and exterior to both existing and new customers.",
+          "There was a clear requirement for strategic intervention rather than ad-hoc posting.",
+        ],
+      },
+      {
+        heading: "The Strategy",
+        paragraphs: [
+          "Fitzpatrick Marketing engaged at a strategic level to stabilise and rebuild the bar's digital presence. The approach focused on consolidation, consistency, and community engagement, with an emphasis on organic growth and internal capability building.",
+          "The strategy included:",
+        ],
+        bullets: [
+          "Consolidation and recovery of existing social media accounts",
+          "Expansion of digital touchpoints through the introduction of TikTok",
+          "Development of a structured content calendar",
+          "A community-first content and engagement approach",
+          "Training of in-house staff to ensure sustainability",
+        ],
+      },
+      {
+        heading: "Services Provided",
+        bullets: [
+          "Social media audit and account consolidation (Meta platforms)",
+          "TikTok account setup and content guidance",
+          "Social media content calendar development",
+          "Organic content planning and execution support",
+          "One-to-one social media training for in-house staff",
+          "Community engagement strategy guidance",
+        ],
+      },
+      {
+        heading: "The Results (6-week period)",
+        bullets: [
+          "Successful recovery and consolidation of all primary social media accounts",
+          "Establishment of active Facebook, Instagram, and TikTok channels",
+          "Organic audience growth of 300+ relevant followers per platform from a standing start with no paid budget.",
+          "Increased engagement on community- and event-led content",
+          "Improved brand consistency and positive audience response following refurbishment",
+          "In-house team fully enabled to manage ongoing social media activity independently",
+          "Content pillars established in clear reporting and guidance document.",
+        ],
+      },
+    ],
   },
   {
-    client: "Basecamp Adventure Park",
-    title: "New website and launch",
-    logo: baseLogo,
-    tags: ["Brand", "Web"],
+    client: "West Lake Aqua Park",
+    title: "Case Study 3",
+    tags: ["Seasonal", "Omni-channel", "Paid media"],
     summary:
-      "Captured the park story through new visuals, site architecture, and seasonal activation campaigns.",
+      "Seasonal outdoor waterpark in Killaloe. Omni-channel seasonal campaign planning, creative coordination, and paid strategy delivered ~47% sales lift year-over-year.",
     quote:
-      "Consistency was our biggest challenge. Fitzpatrick Marketing provided direction, creative design, and a reliable schedule that told our story. They delivered on every detail and added more value along the way.",
+      "Working with Finn this year made a huge difference to the season. Campaigns were joined up, creatives were fresh, and reactivity to our needs were really felt. It was a hands on approach and what we have learned for next season will be invaluable.:",
     person: "Wayne Slattery",
     role: "Owner",
+    sections: [
+      {
+        heading: "Background on the Business",
+        paragraphs: [
+          "West Lake Aqua Park is a seasonal outdoor waterpark catering to families, groups, and tourists in Killaloe, Co. Clare. It has been operating since 2019 and is located on Lough Derg just outside Killaloe Co. Clare.",
+          "It plays a vital role for the local community in attracting people to the town each Summer. The park also provides employment through staffing of a team of lifeguards and land staff each season.",
+        ],
+      },
+      {
+        heading: "The Challenge",
+        paragraphs: [
+          "The business faced a challenging season due to a weather dependency from narrow digital positioning in previous years, despite the use of a large third-party agency and in-house content resources. Marketing activity lacked an integrated, multi-channel approach and was not fully aligned with the commercial realities of a short, high-risk trading season.",
+          "There was a clear need for more agile, coordinated, and outcome-focused marketing delivery.",
+        ],
+      },
+      {
+        heading: "The Strategy",
+        paragraphs: [
+          "Fitzpatrick Marketing was engaged in a hands-on consulting capacity to provide strategic oversight and coordination of marketing activity across the season.",
+          "The strategy focused on:",
+        ],
+        bullets: [
+          "Establishing a structured content and campaign calendar",
+          "Developing an omni-channel marketing approach",
+          "Coordinating creative development and campaign execution",
+          "Adapting activity in response to weather and performance data",
+        ],
+        note: "Key seasonal campaigns included early-season activity, mid-season optimisation, and a final \"end-of-season\" promotional push.",
+      },
+      {
+        heading: "Services Provided",
+        bullets: [
+          "Strategic marketing consultancy (seasonal engagement)",
+          "Social media content calendar development",
+          "On-site content development and creative direction",
+          "Meta (Facebook & Instagram) advertising strategy and management",
+          "Google Ads strategy and management",
+          "Coordination of radio and print advertising activity",
+          "Campaign planning and cross-channel delivery coordination",
+          "Performance monitoring and optimisation guidance",
+        ],
+      },
+      {
+        heading: "The Results (Seasonal Outcome)",
+        bullets: [
+          "Approx. 47% increase in overall sales compared to the previous season",
+          "Improved performance efficiency across paid digital channels",
+          "Increase in return on ad spend (ROAS) across Meta and Google campaigns",
+          "Stronger brand visibility across digital and traditional channels",
+          "More consistent and coordinated marketing execution throughout the season",
+          "Clear reporting and road map for future seasons.",
+          "Creative structure and content pillars established.",
+        ],
+        note: "(While Performance outcomes were in some way influenced by external factors including weather conditions and seasonal demand, we put the park in a position to maximise sales this though our efforts)",
+      },
+    ],
   },
 ];
 
@@ -459,7 +619,7 @@ function App() {
           variant="secondary"
           className="w-fit rounded-full px-4 py-1 text-[0.7rem] uppercase tracking-widest"
         >
-          Clients & testimonials
+          Case Studies
         </Badge>
         <h2>
           Stories from the brands we champion.
@@ -487,4 +647,3 @@ function App() {
 }
 
 export default App;
-
