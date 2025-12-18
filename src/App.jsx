@@ -39,7 +39,7 @@ import baseLogo from "./logos/basecamp.png"
 
 const hoverHighlights = [
   {
-    title: "Affordable retainers",
+    title: "Cost effective retainers",
     description:
       "Transparent scope, no bloated fees, and quick momentum in the first 30 days.",
   },
@@ -111,9 +111,9 @@ const storySlides = [
     ],
   },
   {
-    heading: "Affordable marketing with heart",
+    heading: "Cost effective marketing with heart",
     body: [
-      "We focused on AFFORDABLE solutions for small local businesses, connecting them with their customers through social media, ad campaigns, and clear strategy.",
+      "We focused on Cost effective solutions for small local businesses, connecting them with their customers through social media, ad campaigns, and clear strategy.",
       "The aim was to craft systems they could eventually sustain on their own, making them more digitally literate and confident in every tool we introduced.",
     ],
   },
@@ -121,7 +121,7 @@ const storySlides = [
     heading: "Born from clients' frustrations",
     body: [
       "As promises turned into results, we heard the same story: previous partners offered little care, attention, or measurable wins.",
-      "Fitzpatrick Marketing grew out of that gap. Today, with a compact team of specialists, we keep delivering for businesses big and small—staying true to the mission of providing AFFORDABLE marketing tailored to YOU.",
+      "Fitzpatrick Marketing grew out of that gap. Today, with a compact team of specialists, we keep delivering for businesses big and small—staying true to the mission of providing Cost effective marketing tailored to YOU.",
     ],
   },
 ];
@@ -342,7 +342,7 @@ function App() {
           Mission
         </Badge>
         <CardTitle className="text-3xl leading-tight md:text-4xl">
-          Affordable, strategic marketing for brands that expect progress every week.
+          Cost effective, strategic marketing for brands that expect progress every week.
         </CardTitle>
         <CardDescription className="text-base leading-relaxed">
           Built for owners who want clarity, collaboration, and measurable lift.
@@ -390,7 +390,7 @@ function App() {
             <AccordionContent>
               <p>
                 At Fitzpatrick Marketing our goal is to provide{" "}
-                <span className="font-semibold text-foreground">AFFORDABLE tailored marketing solutions</span> to
+                <span className="font-semibold text-foreground">Cost effective tailored marketing solutions</span> to
                 businesses big and small. We develop and elevate your brand while driving sales through a
                 strategic approach that stands out from the rest.
               </p>
@@ -430,7 +430,7 @@ function App() {
 <section id="services" className="container mx-auto max-w-6xl px-4 py-16">
   <h2>Services</h2>
   <p className="mt-3">
-    AFFORDABLE services, tailored to your business needs.
+    Cost effective services, tailored to your business needs.
   </p>
   <div className="mt-8">
     <Services />
