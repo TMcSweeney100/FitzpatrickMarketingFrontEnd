@@ -34,9 +34,10 @@ import {
 } from "@/components/ui/carousel";
 import "./App.css";
 
-import daffyLogo from "./logos/daffy.png"
+import daffyLogo from "./logos/daffy2.png"
 import baseLogo from "./logos/basecamp.png"
 import bathsLogo from "./images/LogoEssentialBathrooms.png"
+import westLake from "./logos/westLake.png"
 
 const hoverHighlights = [
   {
@@ -261,6 +262,7 @@ const clientStories = [
   {
     client: "West Lake Aqua Park",
     title: "Case Study 3",
+    logo: westLake,
     tags: ["Seasonal", "Omni-channel", "Paid media"],
     summary:
       "Seasonal outdoor waterpark in Killaloe. Omni-channel seasonal campaign planning, creative coordination, and paid strategy delivered ~47% sales lift year-over-year.",
