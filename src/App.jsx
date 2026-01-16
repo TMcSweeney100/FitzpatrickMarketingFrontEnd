@@ -36,6 +36,7 @@ import "./App.css";
 
 import daffyLogo from "./logos/daffy.png"
 import baseLogo from "./logos/basecamp.png"
+import bathsLogo from "./images/LogoEssentialBathrooms.png"
 
 const hoverHighlights = [
   {
@@ -121,7 +122,7 @@ const storySlides = [
     heading: "Born from clients' frustrations",
     body: [
       "As promises turned into results, we heard the same story: previous partners offered little care, attention, or measurable wins.",
-      "Fitzpatrick Marketing grew out of that gap. Today, with a compact team of specialists, we keep delivering for businesses big and small—staying true to the mission of providing Cost effective marketing tailored to YOU.",
+      "Fitzpatrick Marketing grew out of that gap. Today, with a compact team of specialists, we keep delivering for businesses big and small - staying true to the mission of providing Cost effective marketing tailored to YOU.",
     ],
   },
 ];
@@ -321,6 +322,47 @@ const clientStories = [
           "Creative structure and content pillars established.",
         ],
         note: "(While Performance outcomes were in some way influenced by external factors including weather conditions and seasonal demand, we put the park in a position to maximise sales this though our efforts)",
+      },
+    ],
+  },
+  {
+    client: "Essential Bathrooms & Tiles",
+    title: "Case Study 4",
+    logo: bathsLogo,
+    tags: ["Home Improvement", "Digital Reset", "Social + Paid"],
+    summary:
+      "Ballysimon-based bathroom and tile showroom. Eight-week digital reset across Meta, TikTok, and Google with new creative direction and structured planners.",
+    quote: "",
+    person: "",
+    role: "",
+    sections: [
+      {
+        heading: "Business Background",
+        paragraphs: [
+          "Essential Bathrooms & Tiles, Ballysimon, Limerick.",
+          "Industry: Home Improvement / Bathrooms & Tiles.",
+          "Project: Digital Reset & Brand Activation (8 weeks).",
+        ],
+      },
+      {
+        heading: "The Challenge",
+        bullets: [
+          "Dormant and inconsistent social media presence",
+          "Low creative quality",
+          "Unstructured approach to organic social, paid ads, and content creation",
+          "Website issues reducing conversions",
+          "No clear digital funnel for enquiries or showroom visits",
+          "Limited Google Business activity and low local visibility",
+        ],
+      },
+      {
+        heading: "Our Approach",
+        bullets: [
+          "Full digital reset across Meta, TikTok, and Google",
+          "New brand-aligned content direction (video-first, high quality)",
+          "Development of structured monthly creative planners",
+          "Always-on awareness across priority channels",
+        ],
       },
     ],
   },

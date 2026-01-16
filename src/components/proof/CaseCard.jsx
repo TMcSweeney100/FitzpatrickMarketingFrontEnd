@@ -54,7 +54,7 @@ function CaseCard({ title, client, tags = [], summary, logo, quote, person, role
         ) : null}
       </CardHeader>
       <CardContent className="flex-1 text-sm text-muted-foreground">{summary}</CardContent>
-      {quote ? (
+      {(quote || sections.length) ? (
         <CardFooter className="border-t border-border/70 bg-muted/30">
           <Dialog>
             <DialogTrigger asChild>
