@@ -1,12 +1,30 @@
-# React + Vite
+# Fitzpatrick Marketing — Frontend
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A fast, responsive marketing website built for a startup founder to clearly present services and capture leads reliably. The focus is a clean UI, strong visual hierarchy, and a frictionless contact flow.
 
-Currently, two official plugins are available:
+## Live Site
+- Demo: https://fitzpatrick-marketing-front-end.vercel.app :contentReference[oaicite:1]{index=1}
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## What this project includes
+- **Mobile-first, responsive layout** designed for quick scanning and clear messaging
+- **Clean UI + visual hierarchy** (sections, typography, spacing) to guide users to key information
+- **Lead capture / contact flow** wired to an email service
+- **Bot/spam protection** to reduce junk submissions
+- **Performance-focused build** using Vite for a fast dev experience and optimized production output
 
-## Expanding the ESLint configuration
+## Tech Stack
+- React (Vite)
+- JavaScript
+- CSS / UI styling (Tailwind if used in this repo)
+- Email service integration (configured in the project)
+- Bot detection / spam prevention (configured in the project)
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## Getting Started
+
+### Prerequisites
+- Node.js (LTS recommended)
+- npm
+
+### Install
+```bash
+npm install
