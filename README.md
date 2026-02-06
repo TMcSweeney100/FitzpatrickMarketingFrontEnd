@@ -3,7 +3,7 @@
 A fast, responsive marketing website built for a startup founder to clearly present services and capture leads reliably. The focus is a clean UI, strong visual hierarchy, and a frictionless contact flow.
 
 ## Live Site
-- Demo: https://fitzpatrick-marketing-front-end.vercel.app :contentReference[oaicite:1]{index=1}
+- Demo: https://fitzpatrickmarketing.org
 
 ## What this project includes
 - **Mobile-first, responsive layout** designed for quick scanning and clear messaging
